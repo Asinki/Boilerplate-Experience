@@ -1,0 +1,21 @@
+# Roblox Studio files
+*.rbxlx
+*.rbxlx.lock
+*.rbxl
+*.rbxl.lock
+
+# Wally
+Packages/
+ServerPackages/
+
+# Selene
+roblox.toml
+
+# Wally
+wally.lock
+
+# MacOS file system
+*.DS_Store
+
+# Rojo Sourcemap for Luau LSP
+sourcemap.json

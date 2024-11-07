@@ -1,0 +1,6 @@
+{
+    "className": "ServerScriptService",
+    "properties": {
+        "LoadStringEnabled": false
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "className": "HttpService",
+    "properties": {
+        "HttpEnabled": false
+    }
+}

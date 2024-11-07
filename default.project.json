@@ -1,0 +1,70 @@
+{
+	"name": "Experience",
+	"tree": {
+		"$className": "DataModel",
+
+		"Workspace": {
+			"$path": "Place/Assets/Workspace"
+		},
+
+		"Players": {
+			"$path": "Place/Assets/Players"
+		},
+
+		"Lighting": {
+			"$path": "Place/Assets/Lighting"
+		},
+
+		"MaterialService": {
+			"$path": "Place/Assets/MaterialService"
+		},
+
+		"ReplicatedFirst": {
+			"$path": "Place/Assets/ReplicatedFirst",
+
+			"Client": {
+				"$path": "Place/Source/Client"
+			}
+		},
+
+		"ReplicatedStorage": {
+			"$path": "Place/Assets/ReplicatedStorage",
+
+			"Shared": {
+				"$path": "Place/Source/Shared"
+			},
+
+			"Packages": {
+				"$path": "Packages"
+			}
+		},
+
+		"ServerScriptService": {
+			"$path": "Place/Assets/ServerScriptService",
+
+			"Server": {
+				"$path": "Place/Source/Server"
+			},
+
+			"Packages": {
+				"$path": "ServerPackages"
+			}
+		},
+
+		"ServerStorage": {
+			"$path": "Place/Assets/ServerStorage"
+		},
+
+		"SoundService": {
+			"$path": "Place/Assets/SoundService"
+		},
+
+		"TextChatService": {
+			"$path": "Place/Assets/TextChatService"
+		},
+
+		"HttpService": {
+			"$path": "Place/Assets/HttpService"
+		}
+	}
+}

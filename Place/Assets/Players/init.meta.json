@@ -1,0 +1,6 @@
+{
+    "className": "Players",
+    "properties": {
+        "CharacterAutoLoads": false
+    }
+}

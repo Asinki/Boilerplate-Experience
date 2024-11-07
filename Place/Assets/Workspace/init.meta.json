@@ -1,0 +1,11 @@
+{
+    "className": "Workspace",
+    "ignoreUnknownInstances": true,
+    "properties": {
+        "RejectCharacterDeletions": "Enabled",
+        "StreamingEnabled": true,
+        "StreamingMinRadius": 64,
+        "StreamingTargetRadius": 512,
+        "StreamOutBehavior": "Opportunistic"
+    }
+}

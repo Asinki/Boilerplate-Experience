@@ -1,0 +1,19 @@
+{
+    "className": "Lighting",
+    "properties": {
+        "Ambient": [0.27451, 0.27451, 0.27451],
+        "Brightness": 3,
+        "ColorShift_Bottom": [0, 0, 0],
+        "ColorShift_Top": [0, 0, 0],
+        "EnvironmentDiffuseScale": 1,
+        "EnvironmentSpecularScale": 1,
+        "GlobalShadows": false,
+        "OutdoorAmbient": [0.623529, 0.435294, 0.301961],
+        "ShadowSoftness": 0.2,
+        "Technology": "Voxel",
+        "ClockTime": 14.5,
+        "GeographicLatitude": 0,
+        "TimeOfDay": "14:30:00",
+        "ExposureCompensation": 0
+    }
+}

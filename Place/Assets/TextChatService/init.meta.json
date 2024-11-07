@@ -1,0 +1,10 @@
+{
+    "className": "TextChatService",
+    "ignoreUnknownInstances": true,
+    "properties": {
+        "ChatTranslationEnabled": true,
+        "ChatVersion": "TextChatService",
+        "CreateDefaultCommands": true,
+        "CreateDefaultTextChannels": true
+    }
+}
