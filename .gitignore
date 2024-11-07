@@ -19,3 +19,6 @@ wally.lock
 
 # Rojo Sourcemap for Luau LSP
 sourcemap.json
+
+# Blink
+Network.luau
