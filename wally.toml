@@ -19,6 +19,7 @@ Trove = "sleitnick/trove@1.4.0"
 Component = "sleitnick/component@2.4.8"
 Promise = "evaera/promise@4.0.0"
 UIParticle = "4x8matrix/ui-particle-fork@3.0.2"
+DevSuite = "4x8matrix/dev-suite@0.0.5"
 
 [server-dependencies]
 DataKeep = "noahrepublic/datakeep@4.1.0"
