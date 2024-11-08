@@ -1,0 +1,22 @@
+name: Development-CD
+
+on:
+  push:
+    branches:
+      - Development
+  workflow_dispatch:
+
+jobs:
+  Development-CD:
+    name: Development CD
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ok-nick/setup-aftman@v0.4.2
+    - name: Deploy to Development
+      run: rojo upload --api_key "$RBX_KEY" --universe_id "$DEVELOPMENT_UNIVERSE_ID" --asset_id "$DEVELOPMENT_ID"
+      env:
+        RBX_KEY: ${{ secrets.RBX_KEY }}
+        DEVELOPMENT_UNIVERSE_ID: ${{ secrets.DEVELOPMENT_UNIVERSE_ID }}
+        DEVELOPMENT_ID: ${{ secrets.DEVELOPMENT_ID }}

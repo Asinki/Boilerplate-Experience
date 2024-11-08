@@ -1,0 +1,24 @@
+name: Linter/Formater
+
+on:
+  push:
+    branches: [ "Master", "Experimental", "feature/*", "bugfix/*" ]
+  pull_request:
+    branches: [ "Master", "Experimental", "feature/*" ]
+
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: ok-nick/setup-aftman@v0.4.2
+    - name: Generate Standard Library
+      run: selene generate-roblox-std
+
+    - name: Run Selene
+      run: selene .
+
+    - name: Run Stylua
+      run: stylua --check --output-format Summary Place
