@@ -4,6 +4,7 @@
 	this is considered the entrypoint for this experience.
 ]]
 
+local GuiService = game:GetService("GuiService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TeleportService = game:GetService("TeleportService")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
@@ -41,6 +42,8 @@ Runtime:SetFFValue("Build", gitBuild)
 
 Runtime:SetFFValue("IsProduction", isProduction)
 
+Runtime:SetFFValue("ShowLoadingScreenInStudio", false)
+
 Console.setGlobalLogLevel(isProduction and Console.LogLevel.Warn or Console.LogLevel.Debug)
 Console.setGlobalSchema("[%s][%s] :: %s")
 
@@ -58,6 +61,8 @@ xpcall(function()
 	RbxControls:SetDefaultCoreGui()
 	RbxControls:DisableCoreGui()
 	RbxControls:DisableCharacterInput()
+
+	GuiService.TouchControlsEnabled = false
 
 	for _, moduleContainer in RUNTIME_MODULES_TO_REQUIRE do
 		runtimeReporter:Debug(`Loading runtime modules for '{moduleContainer.Name}'`)
@@ -99,8 +104,10 @@ end, function(exception: string)
 		this server which is down.
 	]]
 
+	local traceback = debug.traceback()
+
 	task.spawn(function()
-		runtimeReporter:Debug(debug.traceback())
+		runtimeReporter:Debug(traceback)
 		runtimeReporter:Critical(exception)
 	end)
 

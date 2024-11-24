@@ -1,3 +1,9 @@
+--[[
+	Responsible for calling `OnPlayerRemoving` on all modules in the `singletons` folder.
+
+	see https://www.notion.so/Singletons-136b54502032800eb4cef7fc0a9b86c7
+]]
+
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 

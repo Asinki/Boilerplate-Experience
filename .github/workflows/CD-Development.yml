@@ -3,7 +3,7 @@ name: Development-CD
 on:
   push:
     branches:
-      - Development
+      - development
   workflow_dispatch:
 
 jobs:
@@ -14,9 +14,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: ok-nick/setup-aftman@v0.4.2
+    - name: Install project dependencies
+      run: wally install
+    - name: Compile networking
+      run: blink Place/Network/root.blink
     - name: Deploy to Development
       run: rojo upload --api_key "$RBX_KEY" --universe_id "$DEVELOPMENT_UNIVERSE_ID" --asset_id "$DEVELOPMENT_ID"
       env:
         RBX_KEY: ${{ secrets.RBX_KEY }}
-        DEVELOPMENT_UNIVERSE_ID: ${{ secrets.DEVELOPMENT_UNIVERSE_ID }}
-        DEVELOPMENT_ID: ${{ secrets.DEVELOPMENT_ID }}
+        DEVELOPMENT_UNIVERSE_ID: ${{ vars.DEVELOPMENT_UNIVERSE_ID }}
+        DEVELOPMENT_ID: ${{ vars.DEVELOPMENT_ID }}

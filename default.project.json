@@ -51,6 +51,10 @@
 			}
 		},
 
+		"StarterGui": {
+			"$path": "Place/Assets/StarterGui"
+		},
+
 		"ServerStorage": {
 			"$path": "Place/Assets/ServerStorage"
 		},

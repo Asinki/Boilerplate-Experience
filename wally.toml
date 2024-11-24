@@ -19,7 +19,10 @@ Trove = "sleitnick/trove@1.4.0"
 Component = "sleitnick/component@2.4.8"
 Promise = "evaera/promise@4.0.0"
 UIParticle = "4x8matrix/ui-particle-fork@3.0.2"
-DevSuite = "4x8matrix/dev-suite@0.0.5"
+DevSuite = "4x8matrix/dev-suite@0.0.6"
+State = "4x8matrix/state@2.0.1"
+Shake = "sleitnick/shake@1.1.0"
+Squash = "data-oriented-house/squash@2.4.0"
 
 [server-dependencies]
 DataKeep = "noahrepublic/datakeep@4.1.0"

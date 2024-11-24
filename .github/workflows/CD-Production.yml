@@ -3,7 +3,7 @@ name: Production-CD
 on:
   push:
     branches:
-      - Master
+      - master
   workflow_dispatch:
 
 jobs:
@@ -14,9 +14,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: ok-nick/setup-aftman@v0.4.2
+    - name: Install project dependencies
+      run: wally install
+    - name: Compile networking
+      run: blink Place/Network/root.blink
     - name: Deploy to Production
       run: rojo upload --api_key "$RBX_KEY" --universe_id "$PRODUCTION_UNIVERSE_ID" --asset_id "$PRODUCTION_ID"
       env:
         RBX_KEY: ${{ secrets.RBX_KEY }}
-        PRODUCTION_UNIVERSE_ID: ${{ secrets.PRODUCTION_UNIVERSE_ID }}
-        PRODUCTION_ID: ${{ secrets.PRODUCTION_ID }}
+        PRODUCTION_UNIVERSE_ID: ${{ vars.PRODUCTION_UNIVERSE_ID }}
+        PRODUCTION_ID: ${{ vars.PRODUCTION_ID }}

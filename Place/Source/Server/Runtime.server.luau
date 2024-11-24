@@ -85,8 +85,10 @@ end, function(exception: string)
 		this server which is down.
 	]]
 
+	local traceback = debug.traceback()
+
 	task.spawn(function()
-		runtimeReporter:Debug(debug.traceback())
+		runtimeReporter:Debug(traceback)
 		runtimeReporter:Critical(exception)
 	end)
 

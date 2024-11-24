@@ -1,0 +1,7 @@
+{
+    "className": "StarterGui",
+    "ignoreUnknownInstances": true,
+    "properties": {
+        "ScreenOrientation": "Portrait"
+    }
+}

@@ -1,5 +1,0 @@
-event ExampleEvent {
-	From: Server,
-	Type: Unreliable,
-	Call: SingleSync,
-}
