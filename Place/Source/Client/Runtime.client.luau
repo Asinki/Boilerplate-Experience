@@ -44,12 +44,14 @@ Runtime:SetFFValue("IsProduction", isProduction)
 
 Runtime:SetFFValue("ShowLoadingScreenInStudio", false)
 
-Console.setGlobalLogLevel(isProduction and Console.LogLevel.Warn or Console.LogLevel.Debug)
-Console.setGlobalSchema("[%s][%s] :: %s")
+Console.setDefaults({
+	LogLevel = isProduction and "Warn" or "Debug" :: any,
+})
 
-runtimeReporter:Log(`Server Branch: {gitBranch}`)
-runtimeReporter:Log(`Server Commit: {gitCommit}`)
-runtimeReporter:Log(`Server Build: {gitBuild}`)
+runtimeReporter:Info(`Server Branch: {gitBranch}`)
+runtimeReporter:Info(`Server Commit: {gitCommit}`)
+runtimeReporter:Info(`Server Build: {gitBuild}`)
+runtimeReporter:Info(`Client Build: {version()}`)
 
 if isProduction then
 	runtimeReporter:Warn(`Production environment detected, disabling verbose logs!`)
@@ -94,8 +96,8 @@ xpcall(function()
 	require(ReplicatedFirst.Client.Lifecycles.RenderStepped)(ReplicatedFirst.Client.Singletons)
 
 	runtimeReporter:Debug(`Loaded Singleton lifecycle methods`)
-	runtimeReporter:Log(`Loaded {moduleCount} runtime modules in  {os.clock() - scriptStartTime} seconds`)
-	runtimeReporter:Log(``)
+	runtimeReporter:Info(`Loaded {moduleCount} runtime modules in  {os.clock() - scriptStartTime} seconds`)
+	runtimeReporter:Info(``)
 end, function(exception: string)
 	--[[
 		Error handling in the case of a critical error, if an error occurs here - the game code is considered borked.

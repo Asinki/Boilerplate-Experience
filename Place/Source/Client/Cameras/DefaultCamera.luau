@@ -14,7 +14,9 @@ local TroveTypes = require(ReplicatedStorage.Shared.Types.Trove)
 
 local DefaultCamera = {}
 
-function DefaultCamera.OnActivated(self: DefaultCamera)
+DefaultCamera.Name = `DefaultCamera`
+
+function DefaultCamera.Start(self: DefaultCamera)
 	self.Trove = Trove.new()
 
 	self.Instance.CameraSubject = Players.LocalPlayer.Character
@@ -26,7 +28,7 @@ function DefaultCamera.OnActivated(self: DefaultCamera)
 	end)
 end
 
-function DefaultCamera.OnDeactivated(self: DefaultCamera)
+function DefaultCamera.Stop(self: DefaultCamera)
 	self.Trove:Destroy()
 end
 
@@ -34,4 +36,4 @@ export type DefaultCamera = CameraTypes.Camera & typeof(DefaultCamera) & {
 	Trove: TroveTypes.Trove,
 }
 
-return Sift.Dictionary.merge(CameraProfiler.Camera.new("DefaultCamera"), DefaultCamera)
+return CameraProfiler:Profile(DefaultCamera)
