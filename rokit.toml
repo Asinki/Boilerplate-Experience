@@ -3,9 +3,9 @@
 
 # To add a new tool, add an entry to this table.
 [tools]
-rojo = "rojo-rbx/rojo@7.4.2"
-selene = "Kampfkarren/selene@0.25.0"
+rojo = "rojo-rbx/rojo@7.6.1"
+selene = "Kampfkarren/selene@0.29.0"
 wally = "UpliftGames/wally@0.3.2"
-stylua = "JohnnyMorganz/StyLua@0.20.0"
+stylua = "JohnnyMorganz/StyLua@2.3.1"
 lune = "filiptibell/lune@0.8.0"
-blink = "1Axen/blink@0.15.0-rc.1"
+blink = "1Axen/blink@0.18.6"
