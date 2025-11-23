@@ -8,11 +8,14 @@
 Packages/
 ServerPackages/
 
+# Pesde
+roblox_packages/
+roblox_server_packages/
+luau_packages/
+lune_packages/
+
 # Selene
 roblox.toml
-
-# Wally
-wally.lock
 
 # MacOS file system
 *.DS_Store

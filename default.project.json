@@ -35,7 +35,7 @@
 			},
 
 			"Packages": {
-				"$path": "Packages"
+				"$path": "roblox_packages"
 			}
 		},
 
@@ -47,7 +47,7 @@
 			},
 
 			"Packages": {
-				"$path": "ServerPackages"
+				"$path": "roblox_server_packages"
 			}
 		},
 

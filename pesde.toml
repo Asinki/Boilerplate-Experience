@@ -1,0 +1,42 @@
+name = "asinki/boilerplate_experience"
+version = "0.1.0"
+private = true
+
+[target]
+environment = "roblox"
+lib = "src/init.luau"
+build_files = ["src"]
+
+[indices]
+default = "https://github.com/pesde-pkg/index"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[place]
+shared = "game.ReplicatedStorage.Packages"
+
+[dependencies]
+Console = { wally = "4x8matrix/console",             version = "3.1.0" }
+CameraProfiler = { wally = "4x8matrix/camera-profiler",     version = "2.0.0" }
+RbxControls = { wally = "4x8matrix/roblox-controls",     version = "0.1.0" }
+Runtime = { wally = "4x8matrix/runtime",             version = "1.0.0" }
+Sift = { wally = "csqrl/sift",                    version = "0.0.11" }
+Signal = { wally = "sleitnick/signal",              version = "2.0.1" }
+Trove = { wally = "sleitnick/trove",               version = "1.4.0" }
+Component = { wally = "sleitnick/component",           version = "2.4.8" }
+Promise = { wally = "lukadev-0/typed-promise",                version = "4.0.0" }
+UIParticle = { wally = "4x8matrix/ui-particle-fork",    version = "3.0.2" }
+State = { wally = "4x8matrix/state",               version = "2.0.1" }
+Shake = { wally = "sleitnick/shake",               version = "1.1.0" }
+Squash = { wally = "data-oriented-house/squash",    version = "4.1.0" }
+Charm = { wally = "littensy/charm",                version = "0.10.0" }
+DataKeep = { wally = "noahrepublic/datakeep",         version = "7.0.0" }
+
+[dev_dependencies]
+scripts_rojo = { name = "pesde/scripts_rojo", version = "^0.2.0", target = "lune" }
+rojo = { name = "pesde/rojo", version = "^7.6.1", target = "lune" }
+
+[scripts]
+roblox_sync_config_generator = ".pesde/scripts_rojo/roblox_sync_config_generator.luau"
+sourcemap_generator = ".pesde/scripts_rojo/sourcemap_generator.luau"
